@@ -7,6 +7,7 @@ import {
   Text,
   TextInput,
 } from '@ignite-ui/react'
+import { useRouter } from 'next/router'
 import { ArrowRight } from 'phosphor-react'
 import { Container, Header } from '../styles'
 import {
@@ -65,6 +66,8 @@ type TimeIntervalsFormInput = z.input<typeof timeIntervalsFormSchema>
 type TimeIntervalsFormOutput = z.infer<typeof timeIntervalsFormSchema>
 
 export default function TimeIntervals() {
+  const router = useRouter()
+
   const {
     register,
     control,
@@ -97,6 +100,8 @@ export default function TimeIntervals() {
     try {
       console.log('data.intervals:', data)
       await api.post('/users/time-intervals', data)
+
+      await router.push('/register/update-profile')
     } catch (error) {
       console.error(error)
     }
