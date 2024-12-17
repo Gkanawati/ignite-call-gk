@@ -1,3 +1,5 @@
+import { capitalize } from './capitalize'
+
 interface GetWeekDaysParams {
   short?: boolean
 }
@@ -12,6 +14,6 @@ export function getWeekDays({ short = false }: GetWeekDaysParams = {}) {
         return weekDay.substring(0, 3).toUpperCase()
       }
 
-      return weekDay.substring(0, 1).toUpperCase().concat(weekDay.substring(1))
+      return capitalize(weekDay)
     })
 }
