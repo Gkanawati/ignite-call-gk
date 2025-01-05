@@ -91,6 +91,7 @@ export default async function handle(
           },
         },
       },
+      colorId: '2',
     },
   })
 
