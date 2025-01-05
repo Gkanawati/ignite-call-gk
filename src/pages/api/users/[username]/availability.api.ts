@@ -77,11 +77,11 @@ export default async function handle(
       date: {
         gte: referenceDate
           .set('hour', startHour)
-          // .add(timezoneOffsetInHours, 'hours')
+          .add(timezoneOffsetInHours, 'hours')
           .toDate(),
         lte: referenceDate
           .set('hour', endHour)
-          // .add(timezoneOffsetInHours, 'hours')
+          .add(timezoneOffsetInHours, 'hours')
           .toDate(),
       },
     },
