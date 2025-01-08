@@ -58,6 +58,10 @@ npx prisma migrate dev
 npm run dev
 ```
 
+## 🔗 Link do Projeto:
+
+https://ignite-call-gk.vercel.app/
+
 ## 💻 Telas
 
 ![ignite-call-app-1](https://github.com/user-attachments/assets/1629e1fb-523c-4d15-ab69-72b085c9ae9f)
