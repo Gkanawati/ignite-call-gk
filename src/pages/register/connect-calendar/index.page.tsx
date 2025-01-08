@@ -1,6 +1,6 @@
 import { useRouter } from 'next/router'
 import { signIn, useSession } from 'next-auth/react'
-import { ArrowRight, Check } from 'phosphor-react'
+import { ArrowRight, Check, GoogleLogo } from 'phosphor-react'
 import { Button, Heading, MultiStep, Text } from '@ignite-ui/react'
 import { Container, Header } from '../styles'
 import { AuthError, ConnectBox, ConnectItem } from './styles'
@@ -49,6 +49,7 @@ export default function ConnectCalendar() {
                   size="sm"
                   onClick={handleConnectCalendar}
                 >
+                  <GoogleLogo weight="bold" />
                   Conectar
                   <ArrowRight />
                 </Button>
